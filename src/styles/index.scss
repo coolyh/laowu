@@ -1,0 +1,166 @@
+@import './variables.scss';
+@import './mixin.scss';
+@import './transition.scss';
+@import './element-ui.scss';
+@import './sidebar.scss';
+
+body {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+
+label {
+  font-weight: 700;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%;
+  background-color: #F9FAFB;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+// main-container global css
+.app-container {
+  padding: 20px;
+  
+  .btns-wrap{
+    margin-bottom: 20px;
+  }
+
+  .btns-wrap-right{
+    margin-bottom: 20px;
+    text-align: right;
+  }
+
+  .paging{
+    text-align: right;
+    padding-top: 20px;
+  }
+
+  .first-card{
+    margin-bottom: 10px;
+  }
+
+  .no-border-tabs{
+    .el-tabs__nav-wrap::after{
+      background-color: #fff;
+    }
+    .el-tabs__item{
+      color: #999;
+    }
+    .el-tabs__item.is-active{
+      color: #409EFF;
+    }
+  }
+
+  // 重置表头样式
+  .el-table--border th{
+    background-color: #f7f7f7;
+  }
+
+  .open-more{
+    width: 80px;
+    text-align: right;
+    display: inline-block;
+    color: #409EFF;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 12px;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+  }
+
+  // 筛选项input
+  .screen-form-box{
+    .el-input{
+      width: 178px;
+    }
+  }
+  .screen-form-box-more{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .screen-form-box-left{
+      width: calc(100% - 260px);
+    }
+    .screen-form-box-right{
+      width: 260px;
+    }
+  }
+
+  .down-tip{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    height: 100px;
+    width: 100%;
+    z-index: 10;
+    -webkit-box-shadow: 0 -2px 2px #eee;
+    box-shadow: 0 -2px 2px #eee;
+    -webkit-transition: width .28s;
+    transition: width .28s;
+    line-height: 100px;
+    font-size: 18px;
+    color: #666;
+    padding: 0 30px;
+    text-align: right;
+
+    .number{
+      color: #66b1ff;
+    }
+    .tip-btn{
+      width: 120px;
+      margin-left: 20px;
+      font-size: 18px;
+    }
+  }
+  
+}
+.white-bg{
+  background: #fff;
+}
